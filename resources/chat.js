@@ -150,7 +150,7 @@ document.addEventListener("scroll", (event) => {
 
 function decodeUnicodeToHTMLEntities(str) {
   x=str;
-  if(x==="<think>") return "```Thinking:```";
+  if(x==="<think>") return "```Thinking:```<br>";
   if(x==="</think>") return "______________";
   return x;
 }
@@ -200,6 +200,8 @@ async function submitRequest() {
 
   postRequest(data, interrupt.signal)
     .then(async response => {
+        responseDiv.hidden_text="```"+selectedModel+": ```\n<br>";
+  responseDiv.innerHTML = DOMPurify.sanitize(marked.parse(responseDiv.hidden_text)); // Append word to response container
       await getResponse(response, parsedResponse => {
         let word = decodeUnicodeToHTMLEntities(parsedResponse.response);
         if (parsedResponse.done) {
