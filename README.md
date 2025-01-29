@@ -28,6 +28,6 @@ curl https://AdityaMitra5102.github.io/LocalLLM/oneclickinstall.sh | sh
 
 
 ## Credits:
-1. Engine: Ollama
+1. Engine: Ollama https://github.com/ollama/ollama
 2. Frontend: https://github.com/ollama-ui/ollama-ui
 3. Default models: DeepSeek-R1, Llama3, Gemma2
