@@ -5,6 +5,7 @@ Run SOTA Models on RPi with Ollama. One click install
 1. 8GB RAM
 2. ARM64 or AMD64 based CPU
 3. 16 GB of Free storage
+4. Debian or Ubuntu based Distro. (Including Raspberry Pi OS)
 
 ## Installation:
 Run any one of the following lines on the terminal. The 3rd one is preferred. 
