@@ -148,6 +148,13 @@ document.addEventListener("scroll", (event) => {
   lastKnownScrollPosition = window.scrollY;
 });
 
+function decodeUnicodeToHTMLEntities(str) {
+    return str
+        .replace(/\\u003C/g, "&lt;")  // <
+        .replace(/\\u003E/g, "&gt;")  // >
+        .replace(/\\u002F/g, "&sol;") // /
+        .replace(/\\u0026/g, "&amp;"); // &
+}
 
 // Function to handle the user input and call the API functions
 async function submitRequest() {
@@ -195,7 +202,7 @@ async function submitRequest() {
   postRequest(data, interrupt.signal)
     .then(async response => {
       await getResponse(response, parsedResponse => {
-        let word = parsedResponse.response;
+        let word = decodeUnicodeToHTMLEntities(parsedResponse.response);
         if (parsedResponse.done) {
           chatHistory.context = parsedResponse.context;
           // Copy button
