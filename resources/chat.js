@@ -149,11 +149,10 @@ document.addEventListener("scroll", (event) => {
 });
 
 function decodeUnicodeToHTMLEntities(str) {
-    return str
-        .replace(/\\u003C/g, "&lt;")  // <
-        .replace(/\\u003E/g, "&gt;")  // >
-        .replace(/\\u002F/g, "&sol;") // /
-        .replace(/\\u0026/g, "&amp;"); // &
+  x=str;
+  if(x==="<think>") return "```Thinking:```";
+  if(x==="</think>") return "______________";
+  return x;
 }
 
 // Function to handle the user input and call the API functions
