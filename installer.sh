@@ -17,4 +17,4 @@ sudo service apache2 restart
 
 ollama pull deepseek-r1
 ollama pull llama3
-ollama pull phi4
+ollama pull gemma2
