@@ -2,7 +2,7 @@ sudo apt-get update
 curl -fsSL https://ollama.com/install.sh | sh
 
 sudo rm /etc/systemd/system/ollama.service
-cp ollama.service /etc/systemd/system/ollama.service
+sudo cp ollama.service /etc/systemd/system/ollama.service
 sudo chmod 664 /etc/systemd/system/ollama.service
 sudo systemctl daemon-reload
 sudo systemctl enable ollama
