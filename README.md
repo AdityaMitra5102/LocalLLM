@@ -9,6 +9,8 @@ Run SOTA Models on RPi with Ollama. One click install
 
 ## OS Setup (RPi)
 Use Raspberry Pi OS Lite. Enable SSH during installation with your username and password (Optional if you don't have monitor and keyboard for RPi). Enable Hostname (default: raspberrypi.local). 
+
+
 ![image](https://github.com/user-attachments/assets/d42dfe4b-a431-49ee-9d7f-75dce269c4e6)
 
 
